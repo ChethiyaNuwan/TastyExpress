@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
 }
 
@@ -34,7 +34,6 @@ body{
     text-decoration: none;
     font-size: 16px;
     padding: 8px 12px;
-    border-radius: 5px;
     font-family: Verdana, sans-serif;
     color: black;
 }
@@ -55,8 +54,9 @@ body{
     width: 100%;
     height: 60%;
     transition: opacity 2s ease-in-out;
-    animation: fade 8s infinite;
+    animation: fade 16s infinite;
     position: absolute;
+    filter: brightness(70%);
 }
 
 .banner img:nth-child(4) {
@@ -64,15 +64,15 @@ body{
 }
 
 .banner img:nth-child(3) {
-    animation-delay: 2s;
-}
-
-.banner img:nth-child(2) {
     animation-delay: 4s;
 }
 
+.banner img:nth-child(2) {
+    animation-delay: 8s;
+}
+
 .banner img:nth-child(1) {
-    animation-delay: 6s;
+    animation-delay: 12s;
 }
 
 @keyframes fade {
@@ -82,4 +82,20 @@ body{
     20%, 80% {
         opacity: 0;
     }
+}
+
+.banner-text {
+    transform: translateY(100%);
+    font-family: Verdana, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.banner-text a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
 }
