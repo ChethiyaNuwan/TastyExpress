@@ -6,7 +6,7 @@
 
 </div>
 <div class="banner-text">
-    <h1>It's Tasty - It's Express</h1>
+    <h1>Tasty Foods - Express Delivery</h1>
     <h3>Order delicious foods made by our finest chefs online and get it delivered to your doorstep fast</h3>
     <br><br>
     <a href="#">Order Now</a>
