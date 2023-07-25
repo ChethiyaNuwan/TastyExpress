@@ -11,6 +11,9 @@
 <?php
 include ('shared/header.php');
 include ('shared/banner.php');
+include ('shared/features.php');
+include ('shared/about-us.php');
+include ('shared/footer.php');
 ?>
 
 </body>
