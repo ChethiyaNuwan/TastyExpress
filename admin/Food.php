@@ -20,7 +20,7 @@ include ('shared/Sidebar.php');
 ?></div>
     <div class="index-page-right">
         <?php 
-include ('dashbord.php');
+include ('shared/food-list.php');
 ?></div>
 
 </div>
