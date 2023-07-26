@@ -43,7 +43,7 @@ body {
 /* admin */
 
 .admin-sbow {
-  height: 92vh;
+  height: 92.5vh;
   background-color: darkgreen;
   margin-top: 0;
   display: flex;
@@ -150,4 +150,12 @@ body {
 
 .dashbord-items div a:hover {
   background-color: palegreen;
+}
+
+.fooddashbord {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: springgreen;
 }

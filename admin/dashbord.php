@@ -5,9 +5,9 @@
 <div class="dashbord-items">
         <div> <a href="Food.php">Foods</a></div>
 
-        <div> <a href="food-list.php">Catagories</a></div>
+        <div> <a href="category.php">Catagories</a></div>
 
-        <div> <a href="food-list.php">Orders</a></div>
+        <div> <a href="order.php">Orders</a></div>
         </div>
 
     </div>

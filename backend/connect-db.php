@@ -16,9 +16,9 @@ if(!$conn){
 
 //example query and usage
 //include_once "connect-db.php";
-//$sql = "SELECT * FROM admin";
+//$sql = echo $result->fetch_all(MYSQLI_ASSOC)[0]['email'];"SELECT * FROM admin";
 //$result = mysqli_query($conn, $sql);
-//echo $result->fetch_all(MYSQLI_ASSOC)[0]['email'];
+//
 
 ?>
 

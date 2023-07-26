@@ -2,24 +2,26 @@
 
 
 <?php
+include_once "../backend/connect-db.php";
+//$sql = "SELECT * FROM admin";
 
-require('../backends/connection-pdo.php');
 
-$sql = 'SELECT food.id, food.fname, food.description, categories.name
-        FROM food
+$sql = 'SELECT foods.id, foods.name, foods.description, categories.name
+        FROM foods
         LEFT JOIN categories
-        ON food.cat_id = categories.id';
+        ON foods.category_id = categories.id';
 
-$query  = $pdoconn->prepare($sql);
-$query->execute();
-$arr_all = $query->fetchAll(PDO::FETCH_ASSOC);
+
+$result = mysqli_query($conn, $sql);
+$arr_all =  $result->fetch_all(MYSQLI_ASSOC);
+
 
 
 
 ?>
 						
 
-<div class="section white-text" style="background: #B35458;">
+<div class="fooddashbord" style="background: #B35458;">
 
 	<div class="section">
 		<h3>Foods</h3>
@@ -39,7 +41,7 @@ $arr_all = $query->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
 	<div class="section right" style="padding: 15px 25px;">
-		<a href="food-add.php" class="waves-effect waves-light btn">Add New</a>
+		<a href="FoodADD.php" class="waves-effect waves-light btn">Add New</a>
 	</div>
 	
 	<div class="section center" style="padding: 20px;">
@@ -60,10 +62,10 @@ $arr_all = $query->fetchAll(PDO::FETCH_ASSOC);
 
           ?>
           <tr>
-            <td><?php echo $key['fname']; ?></td>
+            <td><?php echo $key['name']; ?></td>
             <td><?php echo $key['description']; ?></td>
             <td><?php echo $key['name']; ?></td>
-            <td><a href="../backends/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></td>
+            <td><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></td>
           </tr>
 
           <?php } ?>
@@ -73,5 +75,5 @@ $arr_all = $query->fetchAll(PDO::FETCH_ASSOC);
 	</div>
 </div>
 
-<?php require('layout/about-modal.php'); ?>
-<?php require('layout/footer.php'); ?>
+<!-- <?php require('layout/about-modal.php'); ?> -->
+<!-- <?php require('layout/footer.php'); ?> -->
