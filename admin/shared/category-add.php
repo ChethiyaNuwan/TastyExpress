@@ -2,15 +2,15 @@
 
 <?php
 
-include_once "../backend/connect-db.php";
-//$sql = "SELECT * FROM admin";
+// include_once "../backend/connect-db.php";
+// //$sql = "SELECT * FROM admin";
 
 
-$sql = 'SELECT id,name FROM categories';
+// $sql = 'SELECT id,name FROM categories';
 
 
-$result = mysqli_query($conn, $sql);
-$arr_all =  $result->fetch_all(MYSQLI_ASSOC);
+// $result = mysqli_query($conn, $sql);
+// $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
 
 
@@ -20,13 +20,13 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 <div class="section white-text" style="background: #B35458;">
 
 	<div class="section">
-		<h3>Add Food Item</h3>
+		<h3>Add Categories</h3>
 	</div>
 
 
     <div class="section center" style="padding: 40px;">
 
-        <form action="../backend/admin/food-add.php" method="post" enctype="multipart/form-data">
+        <form action="../backend/admin/category-add.php" method="post" enctype="multipart/form-data">
 
             <?php
 
@@ -45,21 +45,10 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
                 <div class="col s6" style="">
                             <div class="input-field">
                             <input id="name" name="name" type="text" class="validate" style="color: black; width: 70%">
-                            <label for="name" style="color: white;"><b>Food Name :</b></label>
+                            <label for="name" style="color: white;"><b>Category Name :</b></label>
                             </div>
                 </div>
-                <div class="col s6" style="">
-                            <div class="input-field" style="color: white !important; width: 90%">
-						    <select name='category'>
-						      <?php 
-
-						      		foreach ($arr_all as $key) {
-						      			echo '<option value="'.$key['id'].'">'.$key['name'].'</option>';
-						      		}
-						      ?>
-						    </select>
-						    <label style="color: white;">Categories</label>
-						  </div>
+              
                 </div>
             </div>
 
@@ -74,6 +63,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
                 </div>
             
             </div>
+            
             <div class="form-group">
                 <input class="form-control" type="file" name="uploadfile" value="" />
             </div>
@@ -81,7 +71,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
             <div class="row">
                 <div class="col s12">
                     <div class="section right" style="padding: 15px 10px;">
-                        <a href="food-list.php" class="waves-effect waves-light btn">Dismiss</a>
+                        <a href="category.php" class="waves-effect waves-light btn">Dismiss</a>
                     </div>
                     <div class="section right" style="padding: 15px 20px;">
                         <button type="submit" class="waves-effect waves-light btn" name="submit">Add New</button>

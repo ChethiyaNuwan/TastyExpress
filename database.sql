@@ -21,7 +21,7 @@ create table foods(
     name varchar(20) not null,
     description varchar(200) not null,
     price int not null,
-    image_path varchar(50) not null,
+    image_path varchar(300) not null,
     category_id int not null,
     primary key (id),
     foreign key (category_id) references categories(id)

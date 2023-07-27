@@ -6,7 +6,7 @@ include_once "../backend/connect-db.php";
 //$sql = "SELECT * FROM admin";
 
 
-$sql = 'SELECT foods.id, foods.name, foods.description, categories.name
+$sql = 'SELECT foods.id, foods.name, foods.description,foods.image_path, categories.name
         FROM foods
         LEFT JOIN categories
         ON foods.category_id = categories.id';
@@ -51,6 +51,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
               <th>Name</th>
               <th>Description</th>
               <th>Category</th>
+              <th>Image</th>
               <th>Action</th>
           </tr>
         </thead>
@@ -64,6 +65,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
           <tr>
             <td><?php echo $key['name']; ?></td>
             <td><?php echo $key['description']; ?></td>
+            <td><img width="100" src="../images/food/<?php echo $key['image_path']; ?>"></td>
             <td><?php echo $key['name']; ?></td>
             <td><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></td>
           </tr>
@@ -77,3 +79,4 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
 <!-- <?php require('layout/about-modal.php'); ?> -->
 <!-- <?php require('layout/footer.php'); ?> -->
+

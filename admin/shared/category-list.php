@@ -36,7 +36,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
   ?>
 
 <div class="section right" style="padding: 15px 25px;">
-  <a href="category-add.php" class="waves-effect waves-light btn">Add New</a>
+  <a href="CategoryADD.php" class="waves-effect waves-light btn">Add New</a>
 </div>
 
 <div class="section center" style="padding: 20px;">
@@ -58,9 +58,9 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
         ?>
         <tr>
           <td><?php echo $key['name']; ?></td>
-          <td><img src="<?php echo $key['image_path']; ?>" alt="Image" width="100"></td>
+          <td><img width="100" src="../images/category/<?php echo $key['image_path']; ?>"></td>
           <td><?php echo $key['description']; ?></td>
-          <td><a href="../backends/admin/cat-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></td>
+            <td><a href="../backend/admin/category-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></td>
         </tr>
 
         <?php } ?>
