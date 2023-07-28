@@ -19,7 +19,8 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
-.navbar-brand {
+.navbar-brand a{
+  text-decoration: none;
   font-size: 24px;
   font-weight: bold;
   font-family: Verdana, sans-serif;
