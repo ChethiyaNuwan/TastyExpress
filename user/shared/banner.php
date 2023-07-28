@@ -1,4 +1,4 @@
-<div>
+<div class="banner-wrap">
     <div class="banner">
         <img src="../images/banner1.jpg" alt="banner 1">
         <img src="../images/banner2.jpg" alt="banner 2">
@@ -11,5 +11,4 @@
             <a href="#">Order Now</a>
         </div>
     </div>
-
 </div>
