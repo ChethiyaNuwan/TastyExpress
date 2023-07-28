@@ -1,5 +1,5 @@
 <div class="about-us">
-    <h1>About Us</h1>
+    <h1 class="heading">About Us</h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam optio deserunt labore impedit maiores non
         consequuntur fugiat, nostrum animi dolor illum, distinctio veniam dicta, reiciendis voluptatum voluptas modi ad
