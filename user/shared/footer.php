@@ -1,12 +1,12 @@
 <footer>
     <div>
-        <h1>TastyFoods Restaurants</h1>
+        <h2>TastyFoods Restaurant</h2>
         <p>No. 123,</p>
         <p>Yatinuwara Veediya,</p>
         <p>Kandy</p>
     </div>
     <div>
-        <h2>Find Us On Social</h2>
+        <h2>Find us on Social Media</h2>
         <p><a>Facebook</a></p>
         <p><a>Instagram</a></p>
     </div>
