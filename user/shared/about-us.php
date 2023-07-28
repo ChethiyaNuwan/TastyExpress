@@ -13,5 +13,5 @@
         in minus, repellat, architecto iure odio quod possimus. Quam, tempora hic. Ratione nihil eos tenetur vel veniam
         molestiae, enim maxime deserunt.
     </p>
-    <img src="../images/banner1.jpg">
+    <img src="../images/staff.png">
 </div>
