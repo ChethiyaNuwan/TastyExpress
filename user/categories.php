@@ -9,7 +9,28 @@
 <body>
 
 <?php
-include ('shared/header.php');
+include('shared/header.php');
+include('shared/banner.php');
+?>
+
+<div class="categories">
+    <h1 class="heading" id="list">We Offer Wide Range Of Categories</h1>
+    <div class="cards-grid">
+        <?php
+        for ($i = 0; $i < 5; $i++) {
+            echo '<div class="card" >
+                    <img src = "../images/banner1.jpg" >
+                    <h3 class="card-title" > Indian</h3 >
+                    <p> sndciducjidjvodsav</p>
+                    <a href = "foods.php" class="link-button">Explore</a>
+                  </div >';
+        }
+        ?>
+    </div>
+</div>
+
+<?php
+include('shared/footer.php');
 ?>
 
 </body>
