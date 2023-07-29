@@ -257,7 +257,7 @@ body {
 .table-container {
   width: 95%;
   overflow: auto;
-  height: 70%;
+  height: 65%;
 }
 
 .thead {
@@ -372,8 +372,6 @@ body {
 .food-Category-head {
   padding-left: 10px;
 }
-
-
 
 /* order */
 
