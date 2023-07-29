@@ -81,7 +81,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
             <div class="row">
                 <div class="col s12">
                     <div class="section right" style="padding: 15px 10px;">
-                        <a href="food-list.php" class="waves-effect waves-light btn">Dismiss</a>
+                        <a href="Food.php" class="waves-effect waves-light btn">Dismiss</a>
                     </div>
                     <div class="section right" style="padding: 15px 20px;">
                         <button type="submit" class="waves-effect waves-light btn" name="submit">Add New</button>

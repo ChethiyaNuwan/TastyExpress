@@ -6,7 +6,7 @@ include_once "../backend/connect-db.php";
 //$sql = "SELECT * FROM admin";
 
 
-$sql = 'SELECT foods.id, foods.name, foods.description,foods.image_path, categories.name
+$sql = 'SELECT foods.id, foods.name, foods.description,foods.image_path, categories.name AS category_name
         FROM foods
         LEFT JOIN categories
         ON foods.category_id = categories.id';
@@ -21,10 +21,11 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 ?>
 						
 
-<div class="fooddashbord" style="background: #B35458;">
+<div class="fooddashbord" >
+  <div class="food-dashbord-internal">
 
-	<div class="section">
-		<h3>Foods</h3>
+	<div class="food-heading">
+		<h1 class="foodh1">FOODS</h1>
 	</div>
 
   <?php
@@ -40,34 +41,37 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
     ?>
 
-	<div class="section right" style="padding: 15px 25px;">
-		<a href="FoodADD.php" class="waves-effect waves-light btn">Add New</a>
+	<div class="food-add">
+    
+		<a href="FoodADD.php" class=""><button class="button">Add New</button></a>
 	</div>
+  <div class="food-thead">
+        
+            <div>Name</div>
+            
+            <div class="food-description-head"> Description</div>
+            <div class="food-image-head">Image</div>
+            <div class="food-Category-head">Category</div>
+            <div></div>
+        
+</div>
 	
-	<div class="section center" style="padding: 20px;">
-		<table class="centered responsive-table">
-        <thead>
-          <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Category</th>
-              <th>Image</th>
-              <th>Action</th>
-          </tr>
-        </thead>
+	<div class="table-container" style="padding: 20px;">
+		<table class="food-table">
+     
 
-        <tbody>
+        <tbody >
           <?php
 
             foreach ($arr_all as $key) {
 
           ?>
-          <tr>
-            <td><?php echo $key['name']; ?></td>
-            <td><?php echo $key['description']; ?></td>
-            <td><img width="100" src="../images/food/<?php echo $key['image_path']; ?>"></td>
-            <td><?php echo $key['name']; ?></td>
-            <td><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></td>
+          <tr >
+            <td class="food-name-cell"> <center><?php echo $key['name']; ?></center></td>
+            <td class="food-description-cell"><center><?php echo $key['description']; ?></center></td>
+            <td><center><img width="100" src="../images/food/<?php echo $key['image_path']; ?>"></center></td>
+            <td><center class="name-cell"><?php echo $key['category_name']; ?></center></td>
+            <td><center><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></center></td>
           </tr>
 
           <?php } ?>
@@ -75,6 +79,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
         </tbody>
       </table>
 	</div>
+  </div>
 </div>
 
 <!-- <?php require('layout/about-modal.php'); ?> -->

@@ -16,10 +16,11 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
 ?>
 	
-<div class="dashbord" style="background: #B35458;">
+  <div class="categorydashbord" >
+  <div class="category-dashbord-internal">
 
-<div class="section">
-  <h3>Categories</h3>
+	<div class="category-heading">
+  <h1 class="categoryh1">CATEGORIES</h1>
 </div>
 
 <?php
@@ -35,20 +36,21 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
   ?>
 
-<div class="section right" style="padding: 15px 25px;">
-  <a href="CategoryADD.php" class="waves-effect waves-light btn">Add New</a>
+<div class="category-add" style="padding: 15px 25px;">
+  <a href="CategoryADD.php" class="waves-effect waves-light btn"><button class="button">Add New</button></a>
 </div>
+<div class="thead">
+        
+            <div>Name</div>
+            <div>Image</div>
+            <div class="description-head"> Description</div>
+            <div></div>
+        
+</div>
+<div class="table-container" style="padding: 20px;">
 
-<div class="section center" style="padding: 20px;">
-  <table class="centered responsive-table">
-      <thead>
-        <tr>
-            <th>Name</th>
-            <th>Image</th>
-            <th> Description</th>
-            <th>Action</th>
-        </tr>
-      </thead>
+  <table class="category-table">
+     
 
       <tbody>
         <?php
@@ -57,15 +59,16 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
         ?>
         <tr>
-          <td><?php echo $key['name']; ?></td>
-          <td><img width="100" src="../images/category/<?php echo $key['image_path']; ?>"></td>
-          <td><?php echo $key['description']; ?></td>
-            <td><a href="../backend/admin/category-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></td>
+          <td class="name-cell"><center><?php echo $key['name']; ?></center></td>
+          <td><center><img width="100" src="../images/category/<?php echo $key['image_path']; ?>"></center></td>
+          <td class="description-cell"><center><?php echo $key['description']; ?></center></td>
+            <td><center><a href="../backend/admin/category-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></center></td>
         </tr>
 
         <?php } ?>
        
       </tbody>
     </table>
+</div>
 </div>
 </div>

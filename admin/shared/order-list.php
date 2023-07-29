@@ -15,25 +15,28 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
 ?>
 
-<div class="dashbord" style="background: #B35458;">
+<div class="orderdashbord" >
+  <div class="order-dashbord-internal">
 
-<div class="section">
-    <h3>Orders</h3>
+	<div class="order-heading">
+		<h1 class="orderh1">ORDERS</h3>
 </div>
 
 -- LOGIN CHECK
+<div class="order-thead">
+        
+            <div>Order ID</div>
+            
+            <div class="order-description-head"> User Name</div>
+            <div class="order-image-head">Food Name</div>
+            <div class="order-Category-head">Status</div>
+            <div></div>
+        
+</div>
 
 <div class="section center" style="padding: 20px;">
     <table class="centered responsive-table">
-        <thead>
-        <tr>
-            <th>Order ID</th>
-            <th>User Name</th>
-            <th>Food Name</th>
-            <!-- <th>Timestamp</th> -->
-            <th>Status</th>
-        </tr>
-        </thead>
+       
 
         <tbody>
         <?php

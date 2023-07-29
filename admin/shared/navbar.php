@@ -4,7 +4,7 @@
             <a href="../admin">Home</a>
             <a href="#">Main site</a>
             <a href="#">About</a>
-            <a href="#">LogOut</a>
+            <a href="../backend/admin/logout.php">LogOut</a>
            
         </span>
 </nav>

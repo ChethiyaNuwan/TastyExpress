@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../stylesheets/admin-styles.css">
 </head>
-<body >
+<body>
 
 <?php
 include ('shared/navbar.php');
@@ -20,7 +20,7 @@ include ('shared/Sidebar.php');
 ?></div>
     <div class="index-page-right">
         <?php 
-include ('shared/food-list.php');
+include ('dashbord.php');
 ?></div>
 
 </div>
