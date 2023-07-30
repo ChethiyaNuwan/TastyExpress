@@ -21,7 +21,7 @@ include('shared/banner.php');
             echo '<h2 class="title">Indian</h2><hr>
             <div class="cards-grid">';
             for ($j = 0; $j < 3; $j++) {
-                echo '<div class="card" >
+                echo '<div class="card item-card" >
                     <img src = "../images/banner1.jpg" >
                     <h3 class="card-title" > Noodles</h3 >
                     <p> sndciducjidjvodsav</p>

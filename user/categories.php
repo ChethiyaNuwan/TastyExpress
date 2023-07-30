@@ -18,7 +18,7 @@ include('shared/banner.php');
     <div class="cards-grid">
         <?php
         for ($i = 0; $i < 5; $i++) {
-            echo '<div class="card" >
+            echo '<div class="card item-card" >
                     <img src = "../images/banner1.jpg" >
                     <h3 class="card-title" > Indian</h3 >
                     <p> sndciducjidjvodsav</p>
