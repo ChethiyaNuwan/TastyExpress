@@ -181,10 +181,26 @@ footer {
   display: grid;
   border-radius: 5px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  height: 350px;
   overflow: hidden;
-  grid-template-rows: 7fr 1fr 3fr 1fr;
   justify-items: center;
+}
+
+.item-card{
+    height: 350px;
+    grid-template-rows: 7fr 1fr 3fr 1fr;
+}
+
+.card input {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.card a{
+    text-decoration: none;
 }
 
 .card img{
@@ -197,6 +213,29 @@ footer {
   margin: 0 20px;
   font-family: Arial, sans-serif;
   font-size: 18px;
+}
+
+
+/*login css starts*/
+.login-card{
+    transform: translateY(130px);
+    height: 500px;
+    width: 500px;
+    grid-template-rows: 3fr 1fr 2fr 1fr 2fr 1fr 1fr 2fr;
+    margin: auto;
+    align-items: center;
+    padding: 20px;
+}
+
+/*register css starts*/
+.register-card{
+    transform: translateY(130px);
+    height: 500px;
+    width: 500px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: auto;
+    align-items: center;
+    padding: 20px;
 }
 
 /*misc css starts*/
@@ -229,6 +268,9 @@ footer {
     border-radius: 5px;
     margin: 15px;
     background-color: springgreen;
+    border: none;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
 }
 
 .link-button:hover{
