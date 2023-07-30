@@ -5,7 +5,7 @@
             <a href="categories.php">Categories</a>
             <a href="foods.php">Foods</a>
             <a href="#">Contact</a>
-            <a href="#">Register</a>
-            <a href="#">Login</a>
+            <a href="register.php">Register</a>
+            <a href="login.php">Login</a>
         </span>
 </nav>
