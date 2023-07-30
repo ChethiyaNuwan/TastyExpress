@@ -407,27 +407,15 @@ body {
   overflow-y: auto;
 }
 
-.order-add {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-}
 .order-table {
   width: 100%;
   border-collapse: collapse;
 }
-.order-table th {
-  font-size: 25px;
-}
-.order-table th,
-.order-table td {
-  padding: 8px;
-  text-align: center;
-}
 
-.order-description-cell {
-  width: 300px;
+.order-name-cell {
+  width: 100px;
   word-wrap: break-word;
+  padding-left: 20px;
 }
 
 .orderh1 {
@@ -436,9 +424,10 @@ body {
   width: 50%;
 }
 
-.order-name-cell {
+.order-id-cell {
   width: 150px;
   word-wrap: break-word;
+  padding-left: 20px;
 }
 
 .order-thead {
@@ -446,18 +435,26 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  padding-left: 8%;
+  padding-left: 7%;
   font-size: 20px;
   font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.order-description-head {
-  padding-left: 100px;
+.order-name {
+  padding-left: 4px;
 }
 
-.order-image-head {
-  padding-left: 70px;
+.order-food-name {
+  padding-right: 70px;
 }
-.order-Category-head {
-  padding-left: 10px;
+/* .order-status-head {
+  padding-left: 200px;
+} */
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
 }

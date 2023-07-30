@@ -20,7 +20,7 @@ if(isset($_SESSION['msg']))
     <link rel="stylesheet" href="../stylesheets/admin-styles.css">
 
 </head>
-<body>
+<body style="font-family: Verdana, sans-serif;">
 
 
     <div class="login-page section">
