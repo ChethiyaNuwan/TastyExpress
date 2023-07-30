@@ -12,14 +12,16 @@
 include('shared/header.php');
 ?>
 
+<span class="error">
+
+</span>
 <form class="card login-card" action="login.php" method="post">
-    <span>Already have an account ?</span>
     <label for="email">Email</label>
     <input type="email" id="email" required>
     <label for="password">Password</label>
     <input type="password" id="password" required>
     <button class="link-button" type="submit">Login</button>
-    <span>or</span>
+    <span>New User ?</span>
     <a href="register.php">Register</a>
 </form>
 
