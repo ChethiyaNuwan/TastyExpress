@@ -9,6 +9,8 @@
 <body>
 
 <?php
+session_start();
+
 include ('shared/header.php');
 include ('shared/banner.php');
 include ('shared/features.php');
