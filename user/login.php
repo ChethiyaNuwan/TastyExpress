@@ -13,18 +13,20 @@ include('shared/header.php');
 ?>
 
 <span class="error">
-
+    <?php echo isset($_GET['error']) ? $_GET['error']:''?>
 </span>
-<form class="card login-card" action="login.php" method="post">
+<span class="success">
+    <?php echo isset($_GET['success']) ? $_GET['success']:''?>
+</span>
+<form class="card login-card" action="../backend/user-login.php" method="post">
     <label for="email">Email</label>
-    <input type="email" id="email" required>
+    <input type="email" id="email" name="email" required>
     <label for="password">Password</label>
-    <input type="password" id="password" required>
+    <input type="password" id="password" name="password" required>
     <button class="link-button" type="submit">Login</button>
     <span>New User ?</span>
     <a href="register.php">Register</a>
 </form>
-
 
 </body>
 </html>
