@@ -13,7 +13,7 @@ include('shared/header.php');
 ?>
 
 <span class="error">
-    <?php echo isset($_POST['error']) ? $_POST['error']:''?>
+    <?php echo isset($_GET['error']) ? $_GET['error']:''?>
 </span>
 <span class="success">
     <?php echo isset($_GET['success']) ? $_GET['success']:''?>
