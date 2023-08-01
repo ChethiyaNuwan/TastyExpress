@@ -298,3 +298,8 @@ hr{
     right: 0;
     left: 0;
 }
+
+.user-name{
+    color: white !important;
+    background-color: black !important;
+}
