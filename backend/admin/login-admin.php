@@ -21,7 +21,16 @@ $result = mysqli_query($conn, $sql);
 $arr_login =  $result->fetch_all(MYSQLI_ASSOC);
 
 
-if (count($arr_login) > 0) {
+if (count($arr_login) == 0) {
+
+	header("location: ../../admin/index.php?error=User with entered email doesn't exists!");
+
+}
+else if($password != $user_data['password']){
+	header("location: ../../admin/index.php?error=Password invalid!");
+
+} else {
+
 
 	foreach($arr_login as $val)
 	{
@@ -35,10 +44,6 @@ if (count($arr_login) > 0) {
     $_SESSION['msg']="You have successfully Logged In!";
     header('location: ../../admin/indexdashbord.php');
 
-} else {
-	session_start();
-	$_SESSION['msg']="Invalid Credentials!";
-	header('location: ../../admin/index.php');
 }
 
 

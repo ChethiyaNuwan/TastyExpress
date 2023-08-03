@@ -24,6 +24,12 @@ if(isset($_SESSION['msg']))
 
 <body>
 
+<span class="error">
+    <?php echo isset($_GET['error']) ? $_GET['error']:''?>
+</span>
+<span class="success">
+    <?php echo isset($_GET['success']) ? $_GET['success']:''?>
+</span>
 
    <form class="card login-card" action="../backend/admin/login-admin.php" method="post">
                                         <h4 class="header">Admin Login</h4>
