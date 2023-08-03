@@ -235,10 +235,10 @@ footer {
 
 /*login css starts*/
 .login-card{
-    transform: translateY(150px);
+    transform: translateY(160px);
     height: 400px;
     width: 500px;
-    grid-template-rows: 48px 46px 83px 10px 130px 0px 93px;
+    grid-template-rows: 48px 46px 83px 10px 130px 0 93px;
     align-items: center;
     margin: auto;
     padding: 30px 20px;
