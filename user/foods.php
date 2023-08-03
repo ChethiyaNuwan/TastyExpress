@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <title>TastyExpress - Delicious Foods Made By Our Finest Chefs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/styles.css?1">
 </head>
 <body>
 
 <?php
 include('shared/header.php');
 include('shared/banner.php');
+
+require_once('../backend/connect-db.php');
+$sql = "SELECT id,name FROM categories";
+$result = mysqli_query($conn, $sql);
+$categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <div class="foods">
     <h1 class="heading" id="list">Explore Our Delicious Foods</h1>
     <div>
         <?php
-        for ($i = 0; $i < 5; $i++) {
-            echo '<h2 class="title">Indian</h2><hr>
+        foreach ($categories as $category) {
+            echo '<h2 class="title" id="'.$category['name'].'">'.$category['name'].'</h2><hr>
             <div class="cards-grid">';
-            for ($j = 0; $j < 3; $j++) {
-                echo '<div class="card item-card" >
-                    <img src = "../images/banner1.jpg" >
-                    <h3 class="card-title" > Noodles</h3 >
-                    <p> sndciducjidjvodsav</p>
-                    <a href = "foods.php" class="link-button">Explore</a>
+
+            $sql = "SELECT * FROM foods WHERE category_id=".$category['id'];
+            $result = mysqli_query($conn,$sql);
+            $foods = mysqli_fetch_all($result,MYSQLI_ASSOC);
+            foreach ($foods as $food) {
+                echo '<div class="card item-card">
+                    <img src = "'.$food['image_path'].'" alt="'.$food['name'].'_image">
+                    <h3 class="card-title" >'.$food['name'].'</h3>
+                    <p>'.$food['description'].'</p>
+                    <div class="card-action">
+                        <span>Rs.'.$food['price'].'</span>
+                        <a href = "confirm-order.php" class="link-button">Order</a>
+                    </div>
                   </div >';
             }
             echo '</div>';
