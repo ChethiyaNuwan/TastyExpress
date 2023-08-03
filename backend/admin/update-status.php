@@ -6,10 +6,8 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"]) && isset($_GET["status"])) {
     $orderId = $_GET["id"];
     $status = $_GET["status"];
-echo $orderId;
-    // Update the delivery status in the session data
-    $_SESSION["delivery_status"][$orderId] = $status;
 
+   
     // Update the delivery status in the database
     require('../connect-db.php');
 

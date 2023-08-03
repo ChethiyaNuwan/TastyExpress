@@ -6,7 +6,7 @@ include_once "../backend/connect-db.php";
 //$sql = "SELECT * FROM admin";
 
 
-$sql = 'SELECT orders.id as id,users.first_name as user_name,foods.name as fname,orders.status as status FROM orders,foods,users where  orders.food_id = foods.id and orders.user_email=users.email';
+$sql = 'SELECT orders.id as id,users.first_name as user_name,foods.name as fname,orders.status as status FROM orders,foods,users where  orders.food_id = foods.id and orders.user_email=users.email order by orders.timestamp desc,orders.id';
 
 
 $result = mysqli_query($conn, $sql);
@@ -58,19 +58,19 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
                     <?php if ($pCheck || $dCheck || $cCheck) {
                         echo '<button disabled>Processing</button>';
                     } else {
-                        echo '<button><a href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Processing">Processing</a></button>';
+                        echo '<button><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Processing">Processing</a></button>';
                     }
                     ?>
                     <?php if ($dCheck || $cCheck) {
                         echo '<button disabled>Delivering</button>';
                     } else {
-                        echo '<button><a href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Delivering">Delivering</a></button>';
+                        echo '<button><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Delivering">Delivering</a></button>';
                     }
                     ?>
                     <?php if ($cCheck) {
                         echo '<button disabled>Completed</button>';
                     } else {
-                        echo '<button><a href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Completed">Completed</a></button>';
+                        echo '<button><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Completed">Completed</a></button>';
                     }
                     ?>
 

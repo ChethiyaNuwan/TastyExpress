@@ -32,19 +32,17 @@ if (!isset($_REQUEST['id'])) {
 
 
 	
-	$sql = "DELETE FROM foods WHERE id = ?";
-    $query  = $conn->prepare($sql);
-    if ($query->execute([$id])) {
-
-    	$_SESSION['msg'] = 'Category Deleted!';
-
+	try {
+		$sql = "DELETE FROM foods WHERE id = ?";
+		$query = $conn->prepare($sql);
+		if ($query->execute([$id])) {
+			$_SESSION['food_msg'] = 'Category Deleted!';
+			header('location: ../../admin/food.php');
+		} else {
+			$_SESSION['food_msg'] = 'There were some problem in the server! Please try again after some time!';
+			header('location: ../../admin/food.php');
+		}
+	} catch (mysqli_sql_exception $e) {
+		$_SESSION['food_msg'] = 'Cannot delete this FOOD beacuse there is an Order on it!';
 		header('location: ../../admin/food.php');
-    	
-    } else {
-
-    	$_SESSION['msg'] = 'There were some problem in the server! Please try again after some time!';
-
-		header('location: ../../admin/food.php');
-
-    }
-
+	}

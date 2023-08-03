@@ -7,7 +7,6 @@
 
         <div class="admin-list"><a href="../admin/order.php">Orders</a></div>
 
-        <div class="admin-list"><a href="#">About</a></div>
 
         <div class="admin-free"></div>
 

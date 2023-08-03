@@ -2,6 +2,8 @@
 
 
 <?php
+session_start();
+
 include_once "../backend/connect-db.php";
 //$sql = "SELECT * FROM admin";
 
@@ -23,21 +25,10 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
   <h1 class="categoryh1">CATEGORIES</h1>
 </div>
 
-<?php
 
-  if (isset($_SESSION['msg'])) {
-      echo '<div class="section center" style="margin: 5px 35px;"><div class="row" style="background: red; color: white;">
-      <div class="col s12">
-          <h6>'.$_SESSION['msg'].'</h6>
-          </div>
-      </div></div>';
-      unset($_SESSION['msg']);
-  }
 
-  ?>
-
-<div class="category-add" style="padding: 15px 25px;">
-  <a href="CategoryADD.php" class="waves-effect waves-light btn"><button class="button">Add New</button></a>
+<div class="category-add" >
+  <a href="CategoryADD.php" ><button class="button">Add New</button></a>
 </div>
 <div class="thead">
         
@@ -70,5 +61,15 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
       </tbody>
     </table>
 </div>
+<?php 
+if (isset($_SESSION['category_msg'])) {
+  echo '<div class="section center" style="margin: 5px 35px;"><div class="row" style="background: red; color: white;">
+  <div class="col s12">
+      <h6>'.$_SESSION['category_msg'].'</h6>
+      </div>
+  </div></div>';
+  unset($_SESSION['category_msg']);
+}?>
 </div>
+
 </div>

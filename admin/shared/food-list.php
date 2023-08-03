@@ -2,6 +2,8 @@
 
 
 <?php
+
+session_start();
 include_once "../backend/connect-db.php";
 //$sql = "SELECT * FROM admin";
 
@@ -28,18 +30,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 		<h1 class="foodh1">FOODS</h1>
 	</div>
 
-  <?php
-
-    if (isset($_SESSION['msg'])) {
-        echo '<div class="section center" style="margin: 5px 35px;"><div class="row" style="background: red; color: white;">
-        <div class="col s12">
-            <h6>'.$_SESSION['msg'].'</h6>
-            </div>
-        </div></div>';
-        unset($_SESSION['msg']);
-    }
-
-    ?>
+ 
 
 	<div class="food-add">
     
@@ -79,9 +70,24 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
         </tbody>
       </table>
 	</div>
+  <?php
+
+if (isset($_SESSION['food_msg'])) {
+    echo '<div class="section center" style="margin: 5px 35px;"><div class="row" style="background: red; color: white;">
+    <div class="col s12">
+        <h6>'.$_SESSION['food_msg'].'</h6>
+        </div>
+    </div></div>';
+    unset($_SESSION['food_msg']);
+}
+
+?>
   </div>
 </div>
 
 <!-- <?php require('layout/about-modal.php'); ?> -->
 <!-- <?php require('layout/footer.php'); ?> -->
+
+
+
 

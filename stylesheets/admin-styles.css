@@ -206,7 +206,7 @@ body {
 .category-dashbord-internal {
   background-color: antiquewhite;
   width: 70%;
-  height: 70%;
+  height: 510px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(0, 0, 0, 0.5),
     5px -5px 10px rgba(0, 0, 0, 0.5), -5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -257,7 +257,7 @@ body {
 .table-container {
   width: 95%;
   overflow: auto;
-  height: 65%;
+  height: 300px;
 }
 
 .thead {
@@ -297,7 +297,7 @@ body {
 .food-dashbord-internal {
   background-color: antiquewhite;
   width: 70%;
-  height: 70%;
+  height: 510px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(0, 0, 0, 0.5),
     5px -5px 10px rgba(0, 0, 0, 0.5), -5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -386,7 +386,7 @@ body {
 .order-dashbord-internal {
   background-color: antiquewhite;
   width: 70%;
-  height: 70%;
+  height: 510px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(0, 0, 0, 0.5),
     5px -5px 10px rgba(0, 0, 0, 0.5), -5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -447,7 +447,7 @@ body {
 }
 
 .order-food-name {
-  padding-right: 70px;
+  padding-right: 90px;
 }
 /* .order-status-head {
   padding-left: 200px;
