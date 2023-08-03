@@ -9,6 +9,7 @@
 <body>
 
 <?php
+session_start();
 include('shared/header.php');
 include('shared/banner.php');
 
@@ -35,9 +36,15 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <h3 class="card-title" >'.$food['name'].'</h3>
                     <p>'.$food['description'].'</p>
                     <div class="card-action">
-                        <span>Rs.'.$food['price'].'</span>
-                        <a href = "confirm-order.php" class="link-button">Order</a>
-                    </div>
+                        <span>Rs.'.$food['price'].'</span>';
+
+                if (isset($_SESSION['user_data'])) {
+                    echo '<a href="confirm-order.php?food_id='.$food['id'].'" class="link-button">Order</a>';
+                } else {
+                    echo '<a href="login.php?error=Login first to order!" class="link-button">Order</a>';
+                }
+
+                echo '</div>
                   </div >';
             }
             echo '</div>';
