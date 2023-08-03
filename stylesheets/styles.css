@@ -187,7 +187,7 @@ footer {
 
 .item-card{
     height: 350px;
-    grid-template-rows: 7fr 1fr 3fr 1fr;
+    grid-template-rows: 6fr 1fr 2.5fr 1.5fr;
 }
 
 .card input {
@@ -213,6 +213,23 @@ footer {
   margin: 0 20px;
   font-family: Arial, sans-serif;
   font-size: 18px;
+}
+
+.card-action{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.card-action span{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    padding: 5px 10px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
 }
 
 
