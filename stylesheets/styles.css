@@ -179,7 +179,7 @@ footer {
 
 .card {
   display: grid;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   justify-items: center;
@@ -219,12 +219,12 @@ footer {
 /*login css starts*/
 .login-card{
     transform: translateY(150px);
-    height: 450px;
+    height: 400px;
     width: 500px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: auto;
+    grid-template-rows: 48px 46px 83px 10px 130px 0px 93px;
     align-items: center;
-    padding: 20px;
+    margin: auto;
+    padding: 30px 20px;
 }
 
 /*register css starts*/
@@ -288,6 +288,7 @@ hr{
     position: absolute;
     right: 0;
     left: 0;
+    font-weight: bold;
 }
 
 .success{
@@ -297,6 +298,7 @@ hr{
     position: absolute;
     right: 0;
     left: 0;
+    font-weight: bold;
 }
 
 .user-name{
