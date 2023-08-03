@@ -470,3 +470,68 @@ body {
   margin: auto;
   padding: 40px 20px;
 }
+
+/*cards css starts*/
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  grid-gap: 20px;
+  margin: 50px;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  justify-items: center;
+}
+
+.item-card {
+  height: 350px;
+  grid-template-rows: 6fr 1fr 2.5fr 1.5fr;
+}
+
+.card input {
+  width: 70%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 0 20px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.card-action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.card-action span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 15px;
+  padding: 5px 10px;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+}
