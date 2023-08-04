@@ -41,8 +41,8 @@ if ($password !== $arr_login[0]['password']) {
 }
 
 // Successful login
-$_SESSION['username'] = $arr_login[0]['name'];
+session_start();
+$_SESSION['username'] = "done";
 $_SESSION['msg'] = "You have successfully Logged In!";
 header('location: ../../admin/indexdashbord.php');
-exit();
 ?>

@@ -2,7 +2,6 @@
 
 
 <?php
-session_start();
 
 include_once "../backend/connect-db.php";
 //$sql = "SELECT * FROM admin";
