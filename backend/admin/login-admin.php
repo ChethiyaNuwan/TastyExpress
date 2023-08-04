@@ -15,37 +15,34 @@ $email=$_POST['email'];
 $password=$_POST['password'];
 
 
-$sql = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
+if (empty($email)) {
+    header("location: ../../admin/index.php?error=Email is required!");
+    exit();
+}
 
+$sql = "SELECT * FROM admin WHERE email='$email'";
 $result = mysqli_query($conn, $sql);
-$arr_login =  $result->fetch_all(MYSQLI_ASSOC);
-
+$arr_login = $result->fetch_all(MYSQLI_ASSOC);
 
 if (count($arr_login) == 0) {
-
-	header("location: ../../admin/index.php?error=User with entered email doesn't exists!");
-
-}
-else if($password != $user_data['password']){
-	header("location: ../../admin/index.php?error=Password invalid!");
-
-} else {
-
-
-	foreach($arr_login as $val)
-	{
-	   $tmp_name= $val['name'];
-
-	}
-
-
-	session_start();
-    $_SESSION['username']=$tmp_name;
-    $_SESSION['msg']="You have successfully Logged In!";
-    header('location: ../../admin/indexdashbord.php');
-
+    header("location: ../../admin/index.php?error=User with entered email doesn't exist!");
+    exit();
 }
 
+if (empty($password)) {
+    header("location: ../../admin/index.php?error=Password is required!");
+    exit();
+}
 
+// Password validation
+if ($password !== $arr_login[0]['password']) {
+    header("location: ../../admin/index.php?error=Invalid password!");
+    exit();
+}
 
+// Successful login
+$_SESSION['username'] = $arr_login[0]['name'];
+$_SESSION['msg'] = "You have successfully Logged In!";
+header('location: ../../admin/indexdashbord.php');
+exit();
 ?>

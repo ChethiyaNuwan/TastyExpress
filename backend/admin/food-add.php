@@ -7,22 +7,23 @@ try {
     } else {
         require_once("../connect-db.php");
     }
+    if (empty($_POST['name']) || empty($_POST['desc']) || empty($_POST['category'])) {
+        $_SESSION['food_add_msg'] = 'A field is empty! Please fill all the required fields.';
+        header("location: ../../admin/FoodADD.php?food_add_msg=Fileds are EMPTY !");
+        exit();
+    }
 } catch (Exception $e) {
-    $_SESSION['msg'] = 'There were some problems on the server! Try again after some time!';
+    $_SESSION['food_add_msg'] = 'There were some problems on the server! Try again after some time!';
     header('location: ../../admin/food.php');
     exit();
 }
 
-if (!isset($_POST['name']) || !isset($_POST['desc'])) {
-    $_SESSION['msg'] = 'Invalid POST variable keys! Refresh the page!';
-    header('location: ../../admin/food.php');
-    exit();
-}
+
 
 $regex = '/^[(A-Z)?(a-z)?(0-9)?\-?\_?\.?\s*]+$/';
 
 if (!preg_match($regex, $_POST['name']) || !preg_match($regex, $_POST['desc'])) {
-    $_SESSION['msg'] = 'Whoa! Invalid Inputs!';
+    $_SESSION['food_add_msg'] = 'Whoa! Invalid Inputs!';
     header('location: ../../admin/food.php');
     exit();
 } else {
@@ -30,6 +31,7 @@ if (!preg_match($regex, $_POST['name']) || !preg_match($regex, $_POST['desc'])) 
     $desc = $_POST['desc'];
     $category = $_POST['category'];
 
+ 
   
         $filename = $_FILES["uploadfile"]["name"];
         $tempname = $_FILES["uploadfile"]["tmp_name"];

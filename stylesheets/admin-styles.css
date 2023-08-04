@@ -555,3 +555,18 @@ body {
   left: 0;
   font-weight: bold;
 }
+.link-button {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 15px;
+  background-color: springgreen;
+  border: none;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.link-button:hover {
+  background-color: palegreen;
+}
