@@ -6,7 +6,7 @@
             <a href="foods.php">Foods</a>
         <?php
         if (isset($_SESSION['user_data'])) {
-            echo '<a href="order-summary.php">Orders</a>
+            echo '<a href="orders.php">Orders</a>
                   <a href="../backend/logout.php">Logout</a>
                   <a class="user-name">Hi, ' . $_SESSION['user_data']['first_name'] . '</a>';
         }
