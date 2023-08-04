@@ -182,12 +182,12 @@ footer {
   border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  justify-items: center;
 }
 
 .item-card{
     height: 350px;
     grid-template-rows: 6fr 1fr 2.5fr 1.5fr;
+    justify-items: center;
 }
 
 .card input {
@@ -232,6 +232,22 @@ footer {
     border-radius: 50px;
 }
 
+.detail-card{
+    width: 900px;
+    height: 220px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail-card div{
+    display: grid;
+}
+
+.detail-cards-grid{
+    display: grid;
+    transform: translateY(150px);
+    grid-gap: 30px;
+    justify-content: center;
+}
 
 /*login css starts*/
 .login-card{
@@ -321,4 +337,9 @@ hr{
 .user-name{
     color: white !important;
     background-color: black !important;
+}
+
+.status{
+    justify-content: center;
+    text-align: center;
 }
