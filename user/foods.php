@@ -39,7 +39,7 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         <span>Rs.'.$food['price'].'</span>';
 
                 if (isset($_SESSION['user_data'])) {
-                    echo '<a href="confirm-order.php?food_id='.$food['id'].'" class="link-button">Order</a>';
+                    echo '<a href="../backend/place-order.php?food_id='.$food['id'].'" class="link-button">Order</a>';
                 } else {
                     echo '<a href="register.php?error=Register first to order!" class="link-button">Order</a>';
                 }
