@@ -45,13 +45,13 @@ if (!preg_match($regex, $_POST['name']) || !preg_match($regex, $_POST['desc'])) 
             $sql = "INSERT INTO foods (category_id, name, description, image_path) VALUES (?, ?, ?, ?)";
             $query = $conn->prepare($sql);
             if ($query->execute([$category, $name, $desc, $filename])) {
-                $_SESSION['msg'] = 'Food Added!';
+                $_SESSION['food_add_msg'] = 'Food Added!';
             } else {
-                $_SESSION['msg'] = 'There were some problems on the server! Please try again after some time!';
+                $_SESSION['food_add_msg'] = 'There were some problems on the server! Please try again after some time!';
             }
         } else {
             $msg = "<h3>  Failed to upload image!</h3>";
-            $_SESSION['msg'] = 'There were some problems with image upload! Please try again!';
+            $_SESSION['food_add_msg'] = 'There were some problems with image upload! Please try again!';
         }
     
     // End of Image Upload Section

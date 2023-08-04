@@ -34,7 +34,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
 	<div class="food-add">
     
-		<a href="FoodADD.php" class=""><button class="button">Add New</button></a>
+		<a href="FoodADD.php" class=""><button class="link-button-new">Add New</button></a>
 	</div>
   <div class="food-thead">
         

@@ -6,23 +6,22 @@ try {
         throw new Exception();
     } else {
         require_once("../connect-db.php");
+    }if (empty($_POST['name']) || empty($_POST['desc']) ) {
+        $_SESSION['category_add_msg'] = 'A field is empty! Please fill all the required fields.';
+        header("location: ../../admin/CategoryADD.php?food_add_msg=Fileds are EMPTY !");
+        exit();
     }
 } catch (Exception $e) {
-    $_SESSION['msg'] = 'There were some problems on the server! Try again after some time!';
+    $_SESSION['category_add_msg'] = 'There were some problems on the server! Try again after some time!';
     header('location: ../../admin/category.php');
     exit();
 }
 
-if (!isset($_POST['name']) || !isset($_POST['desc'])) {
-    $_SESSION['msg'] = 'Invalid POST variable keys! Refresh the page!';
-    header('location: ../../admin/category.php');
-    exit();
-}
 
 $regex = '/^[(A-Z)?(a-z)?(0-9)?\-?\_?\.?\s*]+$/';
 
 if (!preg_match($regex, $_POST['name']) || !preg_match($regex, $_POST['desc'])) {
-    $_SESSION['msg'] = 'Whoa! Invalid Inputs!';
+    $_SESSION['category_add_msg'] = 'Whoa! Invalid Inputs!';
     header('location: ../../admin/category.php');
     exit();
 } else {
@@ -43,13 +42,13 @@ if (!preg_match($regex, $_POST['name']) || !preg_match($regex, $_POST['desc'])) 
             $sql = "INSERT INTO categories (id, name, description, image_path) VALUES (?, ?, ?, ?)";
             $query = $conn->prepare($sql);
             if ($query->execute([$category, $name, $desc, $filename])) {
-                $_SESSION['msg'] = 'Food Added!';
+                $_SESSION['category_add_msg'] = 'Food Added!';
             } else {
-                $_SESSION['msg'] = 'There were some problems on the server! Please try again after some time!';
+                $_SESSION['category_add_msg'] = 'There were some problems on the server! Please try again after some time!';
             }
         } else {
             $msg = "<h3>  Failed to upload image!</h3>";
-            $_SESSION['msg'] = 'There were some problems with image upload! Please try again!';
+            $_SESSION['category_add_msg'] = 'There were some problems with image upload! Please try again!';
         }
     
     // End of Image Upload Section

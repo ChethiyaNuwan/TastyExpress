@@ -34,7 +34,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
         
 </div>
 
-<div class="table-container" style="padding: 20px;">
+<div class="table-container" style="padding: 20px;height: 330px;">
     <table class="order-table" >
        
 
@@ -58,19 +58,19 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
                     <?php if ($pCheck || $dCheck || $cCheck) {
                         echo '<button disabled>Processing</button>';
                     } else {
-                        echo '<button><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Processing">Processing</a></button>';
+                        echo '<button class="link-button-new-x"><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Processing">Processing</a></button>';
                     }
                     ?>
                     <?php if ($dCheck || $cCheck) {
                         echo '<button disabled>Delivering</button>';
                     } else {
-                        echo '<button><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Delivering">Delivering</a></button>';
+                        echo '<button class="link-button-new-x"><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Delivering">Delivering</a></button>';
                     }
                     ?>
                     <?php if ($cCheck) {
                         echo '<button disabled>Completed</button>';
                     } else {
-                        echo '<button><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Completed">Completed</a></button>';
+                        echo '<button class="link-button-new-x"><a style="text-decoration: none;" href="../backend/admin/update-status.php?id=' . $key['id'] . '&status=Completed">Completed</a></button>';
                     }
                     ?>
 

@@ -28,12 +28,12 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
 
 <div class="category-add" >
-  <a href="CategoryADD.php" ><button class="button">Add New</button></a>
+  <a href="CategoryADD.php" ><button class="link-button-new">Add New</button></a>
 </div>
 <div class="thead">
         
             <div>Name</div>
-            <div>Image</div>
+            <div style="    padding-right: 40px;">Image</div>
             <div class="description-head"> Description</div>
             <div></div>
         

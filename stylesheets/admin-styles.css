@@ -270,7 +270,7 @@ body {
   font-weight: bold;
 }
 .description-head {
-  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .categoryh1 {
@@ -569,4 +569,130 @@ body {
 
 .link-button:hover {
   background-color: palegreen;
+}
+
+/* new records */
+
+.cardnew {
+  display: grid;
+  border-radius: 20px;
+
+  overflow: hidden;
+  justify-items: center;
+}
+/* .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  grid-gap: 20px;
+  margin: 50px;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  justify-items: center;
+}
+
+.item-card {
+  height: 350px;
+  grid-template-rows: 6fr 1fr 2.5fr 1.5fr;
+} */
+
+.cardnew input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.cardnew a {
+  text-decoration: none;
+}
+
+.cardnew img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardnew p {
+  margin: 0 20px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.cardnew-action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.cardnew-action span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 15px;
+  padding: 5px 10px;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+}
+
+.input_field {
+  width: 40%;
+}
+
+.link-button-new {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* margin: 15px; */
+  background-color: springgreen;
+  border: none;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.link-button-new:hover {
+  background-color: palegreen;
+}
+
+.link-button-new-x {
+  text-decoration: none;
+  color: black;
+  padding: 2px 5px;
+  /* border-radius: 5px; */
+  /* margin: 15px; */
+  background-color: springgreen;
+  border: none;
+  font-size: 13px;
+  font-family: Verdana, sans-serif;
+}
+
+.link-button-new-x:hover {
+  background-color: palegreen;
+}
+
+.twobutton {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.error_x {
+  color: red;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-top: 20px;
+  font-weight: bold;
 }
