@@ -332,7 +332,7 @@ body {
 }
 .food-table th,
 .food-table td {
-  padding: 8px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -356,18 +356,18 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
-  padding-left: 8%;
+  width: 81.5%;
+  padding-left: 7.5%;
   font-size: 20px;
   font-weight: bold;
 }
 
 .food-description-head {
-  padding-left: 100px;
+  padding-left: 60px;
 }
 
 .food-image-head {
-  padding-left: 70px;
+  padding-left: 37px;
 }
 .food-Category-head {
   padding-left: 10px;
@@ -695,4 +695,8 @@ body {
   left: 0;
   margin-top: 20px;
   font-weight: bold;
+}
+
+.price-cell {
+  /* margin-left: 20px; */
 }

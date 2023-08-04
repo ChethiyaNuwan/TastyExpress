@@ -7,7 +7,7 @@ try {
     } else {
         require_once("../connect-db.php");
     }
-    if (empty($_POST['name']) || empty($_POST['desc']) || empty($_POST['category'])) {
+    if (empty($_POST['name']) || empty($_POST['desc']) || empty($_POST['category']) || empty($_POST['price'])) {
         $_SESSION['food_add_msg'] = 'A field is empty! Please fill all the required fields.';
         header("location: ../../admin/FoodADD.php?food_add_msg=Fileds are EMPTY !");
         exit();
@@ -30,6 +30,8 @@ if (!preg_match($regex, $_POST['name']) || !preg_match($regex, $_POST['desc'])) 
     $name = $_POST['name'];
     $desc = $_POST['desc'];
     $category = $_POST['category'];
+    $price = $_POST['price'];
+
 
  
   
@@ -42,9 +44,9 @@ if (!preg_match($regex, $_POST['name']) || !preg_match($regex, $_POST['desc'])) 
             $msg = "<h3>  Image uploaded successfully!</h3>";
 
             // Insert the food details along with the image filename into the foods table
-            $sql = "INSERT INTO foods (category_id, name, description, image_path) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO foods (category_id, name, description, image_path,price) VALUES (?, ?, ?, ?,?)";
             $query = $conn->prepare($sql);
-            if ($query->execute([$category, $name, $desc, $filename])) {
+            if ($query->execute([$category, $name, $desc, $filename,$price])) {
                 $_SESSION['food_add_msg'] = 'Food Added!';
             } else {
                 $_SESSION['food_add_msg'] = 'There were some problems on the server! Please try again after some time!';

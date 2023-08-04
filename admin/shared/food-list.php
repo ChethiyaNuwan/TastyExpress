@@ -7,7 +7,7 @@ include_once "../backend/connect-db.php";
 //$sql = "SELECT * FROM admin";
 
 
-$sql = 'SELECT foods.id, foods.name, foods.description,foods.image_path, categories.name AS category_name
+$sql = 'SELECT foods.id, foods.name, foods.description,foods.image_path, categories.name AS category_name,foods.price
         FROM foods
         LEFT JOIN categories
         ON foods.category_id = categories.id';
@@ -42,7 +42,9 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
             <div class="food-description-head"> Description</div>
             <div class="food-image-head">Image</div>
             <div class="food-Category-head">Category</div>
-            <div></div>
+            <div class="food-Category-head">Price</div>
+
+            
         
 </div>
 	
@@ -61,7 +63,9 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
             <td class="food-description-cell"><center><?php echo $key['description']; ?></center></td>
             <td><center><img width="100" src="../images/food/<?php echo $key['image_path']; ?>"></center></td>
             <td><center class="name-cell"><?php echo $key['category_name']; ?></center></td>
-            <td><center><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></center></td>
+            <td><center class="price-cell"><?php echo $key['price']; ?></center></td>
+
+            <td><center><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span style="font-size:12px;" class="new badge" data-badge-caption="">Delete</span></a></center></td>
           </tr>
 
           <?php } ?>

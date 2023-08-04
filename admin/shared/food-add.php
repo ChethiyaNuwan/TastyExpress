@@ -27,7 +27,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
     
 
 
-    <div class="section center" style="padding: 40px;">
+    <div class="section center" style="padding-top:0px;padding-right: 40px;padding-bottom: 40px;padding-left: 40px;">
     
 
         <form class="cardnew" action="../backend/admin/food-add.php" method="post" enctype="multipart/form-data">
@@ -67,6 +67,17 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
                 <label for="desc" style="color: black;"><b>Description :</b></label>
 
                 <input id="desc" name="desc" type="text" class="validate" style="color: black; width: 100%">
+                </div>
+                
+                </div>
+            
+            </div><div class="input_field" >
+                <div >
+
+                <div class="input-field">
+                <label for="desc" style="color: black;"><b>Price :</b></label>
+
+                <input id="price" name="price" type="number" class="validate" style="color: black; width: 100%">
                 </div>
                 
                 </div>
