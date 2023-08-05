@@ -47,6 +47,7 @@ foreach ($order_data as $order) {
             <div class="status">
                 <h3 class="card-title">Order Status</h3>
                 <p>'.$order['status'].'</p>
+                <a class="link-button" href="../backend/cancel-order.php?order_id='.$order['id'].'">Cancel Order</a>
             </div>
           </div>';
 }

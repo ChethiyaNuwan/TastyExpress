@@ -258,6 +258,7 @@ footer {
     align-items: center;
     margin: auto;
     padding: 40px 20px;
+    justify-items: center;
 }
 
 /*register css starts*/
@@ -269,6 +270,7 @@ footer {
     margin: auto;
     align-items: center;
     padding: 20px;
+    justify-items: center;
 }
 
 /*misc css starts*/
@@ -342,4 +344,6 @@ hr{
 .status{
     justify-content: center;
     text-align: center;
+    grid-template-rows: repeat(3,1fr);
+    align-items: center;
 }
