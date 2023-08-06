@@ -259,6 +259,10 @@ body {
   overflow: auto;
   height: 300px;
 }
+.table-container-heading {
+  width: 93%;
+  height: 20px;
+}
 
 .thead {
   display: flex;
@@ -328,7 +332,7 @@ body {
   border-collapse: collapse;
 }
 .food-table th {
-  font-size: 25px;
+  font-size: 18px;
 }
 .food-table th,
 .food-table td {
