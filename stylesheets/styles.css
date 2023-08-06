@@ -186,7 +186,7 @@ footer {
 
 .item-card{
     height: 350px;
-    grid-template-rows: 6fr 1fr 2.5fr 1.5fr;
+    grid-template-rows: 165px 1fr 2.5fr 1.5fr;
     justify-items: center;
 }
 

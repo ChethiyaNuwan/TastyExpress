@@ -25,7 +25,7 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php
         foreach ($categories as $category){
             echo '<div class="card item-card" >
-                    <img src = "'.$category['image_path'].'" alt="'.$category['name'].'_image">
+                    <img src = "../images/category/'.$category['image_path'].'" alt="'.$category['name'].'_image">
                     <h3 class="card-title" >'.$category['name'].'</h3 >
                     <p>'.$category['description'].'</p>
                     <a href = "foods.php#'.$category['name'].'" class="link-button">Explore</a>

@@ -32,7 +32,7 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
             $foods = mysqli_fetch_all($result,MYSQLI_ASSOC);
             foreach ($foods as $food) {
                 echo '<div class="card item-card">
-                    <img src = "'.$food['image_path'].'" alt="'.$food['name'].'_image">
+                    <img src = "../images/food/'.$food['image_path'].'" alt="'.$food['name'].'_image">
                     <h3 class="card-title" >'.$food['name'].'</h3>
                     <p>'.$food['description'].'</p>
                     <div class="card-action">
