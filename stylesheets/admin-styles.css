@@ -702,5 +702,13 @@ body {
 }
 
 .price-cell {
-  /* margin-left: 20px; */
+  width: 50px;
+}
+
+td {
+  border: 1px solid black;
+}
+
+th {
+  border: 1px solid black;
 }

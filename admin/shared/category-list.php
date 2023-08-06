@@ -29,18 +29,31 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 <div class="category-add" >
   <a href="CategoryADD.php" ><button class="link-button-new">Add New</button></a>
 </div>
-<div class="thead">
+<!-- <div class="thead">
         
             <div>Name</div>
             <div style="    padding-right: 40px;">Image</div>
             <div class="description-head"> Description</div>
             <div></div>
         
-</div>
-<div class="table-container" style="padding: 20px;">
+</div> -->
+<div class="table-container-heading" style="
+    padding: 0px 20px;
+">
 
   <table class="category-table">
-     
+     <thead>
+        <tr>
+          <th class="name-cell"><center>Name</center></th>
+          <th><center>Image</center></th>
+          <th class="description-cell"><center>Description</center></th>
+            <th style="width:85px;"></th>
+        </tr>
+     </thead>
+  </table>
+</div>
+     <div class="table-container" style="padding: 20px;">
+     <table class="category-table">
 
       <tbody>
         <?php

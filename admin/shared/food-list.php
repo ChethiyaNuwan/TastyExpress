@@ -53,9 +53,9 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
       <thead>
        <tr >
-         <th class="food-name-cell"> <center>Name</center></th>
+         <td class="food-name-cell" style="width:130px;"> <center>Name</center></td>
          <th class="food-description-cell"><center>Description</center></th>
-         <th style="width:100px;"><center>Image</center></th>
+         <th style="width:110px;"><center>Image</center></th>
          <th><center class="name-cell">Category</center></th>
          <th><center class="price-cell">Price</center></th>
          <th style="width:60px;"></th>
