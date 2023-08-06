@@ -39,18 +39,20 @@ echo '<div class="detail-cards-grid">';
 foreach ($order_data as $order) {
     echo '<div class="card detail-card">
             <div>
-                <h3 class="card-title" >'.$order['name'].'</h3>
-                <p>Order ID: '.$order['id'].'</p>
-                <p>Order Date: '.$order['timestamp'].'</p>
-                <p>Order Time: '.$order['timestamp'].'</p>
+                <h3 class="card-title" >' . $order['name'] . '</h3>
+                <p>Order ID: ' . $order['id'] . '</p>
+                <p>Order Date: ' . $order['timestamp'] . '</p>
+                <p>Order Time: ' . $order['timestamp'] . '</p>
             </div>
             <div class="status">
                 <h3 class="card-title">Order Status</h3>
-                <p>'.$order['status'].'</p>
-                <a class="link-button" href="../backend/cancel-order.php?order_id='.$order['id'].'">Cancel Order</a>
-            </div>
+                <p>' . $order['status'] . '</p>';
+                if ($order['status'] == 'Pending') {
+                    echo '<a class="link-button" href="../backend/cancel-order.php?order_id=' . $order['id'] . '">Cancel Order</a>';
+                }
+      echo '</div>
           </div>';
-}
+    }
 echo '</div>';
 ?>
 
