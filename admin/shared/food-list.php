@@ -47,7 +47,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
             
         
 </div> -->
-<div class="table-container-heading" style="padding: 20px;">
+<div class="table-container-heading" style="padding: 0px 20px 6px 20px;">
 <table class="food-table">
      
 
@@ -82,7 +82,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
           <tr >
             <td class="food-name-cell"> <center><?php echo $key['name']; ?></center></td>
             <td class="food-description-cell"><center><?php echo $key['description']; ?></center></td>
-            <td><center><img width="100" src="../images/food/<?php echo $key['image_path']; ?>"></center></td>
+            <td style="width:100px;"><center><img width="100" src="../images/food/<?php echo $key['image_path']; ?>"></center></td>
             <td><center class="name-cell"><?php echo $key['category_name']; ?></center></td>
             <td><center class="price-cell"><?php echo $key['price']; ?></center></td>
 
