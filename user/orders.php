@@ -14,7 +14,7 @@ require_once ('../backend/connect-db.php');
     <meta charset="UTF-8">
     <title>TastyExpress - Orders</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../stylesheets/styles.css?2">
+    <link rel="stylesheet" href="../stylesheets/styles.css?23">
 </head>
 <body>
 
@@ -44,13 +44,18 @@ foreach ($order_data as $order) {
     echo '<div class="card detail-card">
             <div>
                 <h3 class="card-title" >' . $order['name'] . '</h3>
-                <p>Order ID: ' . $order['id'] . '</p>
-                <p>Order Date: ' . $order['timestamp'] . '</p>
-                <p>Order Time: ' . $order['timestamp'] . '</p>
+                <p>Order ID: ' . $order['id'] . '</p>';
+
+                $timestamp = date_create($order['timestamp']);
+                $date = date_format($timestamp,"d M Y");
+                $time = date_format($timestamp,"g:i A");
+
+          echo '<p>Order Date: ' . $date . '</p>
+                <p>Order Time: ' . $time . '</p>
             </div>
             <div class="status">
                 <h3 class="card-title">Order Status</h3>
-                <p>' . $order['status'] . '</p>';
+                <h2>' . $order['status'] . '</h2>';
                 if ($order['status'] == 'Pending') {
                     echo '<a class="link-button" href="../backend/cancel-order.php?order_id=' . $order['id'] . '">Cancel Order</a>';
                 }

@@ -6,17 +6,17 @@ body {
 /*header css starts*/
 
 .navbar {
-  background-color: springgreen;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  border-radius: 0 0 5px 5px;
+    background-color: springgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
 }
 
 .navbar-brand a {
@@ -28,8 +28,8 @@ body {
 }
 
 .nav-list {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .nav-list a {
@@ -42,14 +42,14 @@ body {
 }
 
 .nav-list a:hover {
-  background-color: palegreen;
+    background-color: palegreen;
 }
 
 /*banner css starts*/
 
 .banner {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .banner img {
@@ -62,7 +62,7 @@ body {
 }
 
 .banner img:nth-child(4) {
-  animation-delay: 0s;
+    animation-delay: 0s;
 }
 
 .banner img:nth-child(3) {
@@ -118,7 +118,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 .features div {
@@ -163,28 +163,28 @@ footer {
 
 /*categories,foods css starts*/
 
-.categories,.foods {
+.categories, .foods {
     transform: translateY(475px);
 }
 
 /*cards css starts*/
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
-  grid-gap: 20px;
-  margin: 50px;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-gap: 20px;
+    margin: 50px;
+    justify-content: center;
 }
 
 .card {
-  display: grid;
-  border-radius: 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+    display: grid;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-.item-card{
+.item-card {
     height: 350px;
     grid-template-rows: 165px 1fr 2.5fr 1.5fr;
     justify-items: center;
@@ -199,30 +199,30 @@ footer {
     font-size: 14px;
 }
 
-.card a{
+.card a {
     text-decoration: none;
 }
 
-.card img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.card p{
-  margin: 0 20px;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
+.card p {
+    margin: 0 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
 }
 
-.card-action{
+.card-action {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
 }
 
-.card-action span{
+.card-action span {
     font-size: 20px;
     font-weight: bold;
     margin-left: 15px;
@@ -232,17 +232,17 @@ footer {
     border-radius: 50px;
 }
 
-.detail-card{
+.detail-card {
     width: 900px;
     height: 220px;
     grid-template-columns: 1fr 1fr;
 }
 
-.detail-card div{
+.detail-card div {
     display: grid;
 }
 
-.detail-cards-grid{
+.detail-cards-grid {
     display: grid;
     transform: translateY(150px);
     grid-gap: 30px;
@@ -250,7 +250,7 @@ footer {
 }
 
 /*login css starts*/
-.login-card{
+.login-card {
     transform: translateY(160px);
     height: 400px;
     width: 500px;
@@ -262,7 +262,7 @@ footer {
 }
 
 /*register css starts*/
-.register-card{
+.register-card {
     transform: translateY(110px);
     height: 550px;
     width: 500px;
@@ -282,21 +282,21 @@ footer {
 }
 
 .card-title {
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: normal;
     font-size: 30px;
-  margin: 15px;
+    margin: 15px;
 }
 
-.title{
+.title {
     font-weight: normal;
     font-size: 35px;
     text-align: center;
     margin-bottom: 0;
-    margin-top:60px
+    margin-top: 60px
 }
 
-.link-button{
+.link-button {
     text-decoration: none;
     color: black;
     padding: 10px 20px;
@@ -308,15 +308,15 @@ footer {
     font-family: Verdana, sans-serif;
 }
 
-.link-button:hover{
+.link-button:hover {
     background-color: palegreen;
 }
 
-hr{
+hr {
     width: 65%;
 }
 
-.error{
+.error {
     top: 80px;
     color: red;
     text-align: center;
@@ -326,7 +326,7 @@ hr{
     font-weight: bold;
 }
 
-.success{
+.success {
     top: 80px;
     color: springgreen;
     text-align: center;
@@ -336,19 +336,25 @@ hr{
     font-weight: bold;
 }
 
-.user-name{
+.user-name {
     color: white !important;
     background-color: black !important;
 }
 
-.status{
+.status {
     justify-content: center;
     text-align: center;
-    grid-template-rows: repeat(3,1fr);
     align-items: center;
 }
 
-.no-data{
+.status h2 {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.no-data {
     transform: translateY(100px);
     text-align: center;
 }
