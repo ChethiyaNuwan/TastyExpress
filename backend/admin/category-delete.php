@@ -29,19 +29,30 @@ if (!isset($_REQUEST['id'])) {
 
 	$id = $_REQUEST['id'];
 
+if (!isset($_REQUEST['path'])) {
+
+    $_SESSION['msg'] = 'Invalid path!';
+
+    header('location: ../../admin/category.php');
+
+    exit();
+}
+
+    $path = $_REQUEST['path'];
 
 
-	
-	
-  
 
 
 
-	try {
+
+try {
 		$sql = "DELETE FROM categories WHERE id = ?";
     $query  = $conn->prepare($sql);
 		if ($query->execute([$id])) {
 			$_SESSION['category_msg'] = 'Category Deleted!';
+
+            //deleting image from local
+            unlink('../../images/category/'.$path);
 
 			header('location: ../../admin/category.php');
 		} else {
@@ -50,6 +61,6 @@ if (!isset($_REQUEST['id'])) {
 
 		}
 	} catch (mysqli_sql_exception $e) {
-		$_SESSION['category_msg'] = 'Cannot delete this CATEGORY beacuse there is a FOOD on it!';
+		$_SESSION['category_msg'] = 'Cannot delete this CATEGORY because there is a FOOD on it!';
 			header('location: ../../admin/category.php');
 	}

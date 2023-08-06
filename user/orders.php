@@ -35,6 +35,10 @@ $sql = "SELECT f.name,o.id,o.timestamp,o.status FROM orders o,foods f WHERE f.id
 $result = mysqli_query($conn,$sql);
 $order_data = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
+if (!$order_data){
+    echo '<h3 class="no-data">No Orders Yet!</h3>';
+}
+
 echo '<div class="detail-cards-grid">';
 foreach ($order_data as $order) {
     echo '<div class="card detail-card">

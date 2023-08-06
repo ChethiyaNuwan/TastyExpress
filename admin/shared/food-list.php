@@ -86,7 +86,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
             <td><center class="name-cell"><?php echo $key['category_name']; ?></center></td>
             <td><center class="price-cell"><?php echo $key['price']; ?></center></td>
 
-            <td><center><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span style="font-size:12px;" class="new badge" data-badge-caption="">Delete</span></a></center></td>
+            <td><center><a href="../backend/admin/food-delete.php?id=<?php echo $key['id'].'&path='.$key['image_path'] ?>"><span style="font-size:12px;" class="new badge" data-badge-caption="">Delete</span></a></center></td>
           </tr>
 
           <?php } ?>
