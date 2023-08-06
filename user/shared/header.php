@@ -1,11 +1,19 @@
 <nav class="navbar">
-    <span class="navbar-brand">TastyExpress</span>
+    <span class="navbar-brand"><a href="#">TastyExpress</a></span>
     <span class="nav-list">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Categories</a>
-            <a href="#">Foods</a>
-            <a href="#">Contact</a>
-            <a href="#">Login</a>
+            <a href="index.php">Home</a>
+            <a href="categories.php">Categories</a>
+            <a href="foods.php">Foods</a>
+        <?php
+        if (isset($_SESSION['user_data'])) {
+            echo '<a href="orders.php">Orders</a>
+                  <a href="../backend/logout.php">Logout</a>
+                  <a class="user-name">Hi, ' . $_SESSION['user_data']['first_name'] . '</a>';
+        }
+        else{
+            echo '<a href="register.php">Register</a>
+                  <a href="login.php">Login</a>';
+        }
+        ?>
         </span>
 </nav>

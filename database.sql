@@ -41,6 +41,7 @@ create table orders(
     food_id int not null,
     user_email varchar(50) not null,
     status varchar(20) not null default 'Pending',
+    timestamp timestamp not null default current_timestamp,
     primary key (id),
     foreign key (food_id) references foods(id),
     foreign key (user_email) references users(email)
