@@ -35,7 +35,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
     
 		<a href="FoodADD.php" class=""><button class="link-button-new">Add New</button></a>
 	</div>
-  <div class="food-thead">
+  <!-- <div class="food-thead">
         
             <div>Name</div>
             
@@ -46,9 +46,30 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
 
             
         
-</div>
-	
+</div> -->
+<div class="table-container-heading" style="padding: 20px;">
+<table class="food-table">
+     
+
+      <thead>
+       <tr >
+         <th class="food-name-cell"> <center>Name</center></th>
+         <th class="food-description-cell"><center>Description</center></th>
+         <th style="width:100px;"><center>Image</center></th>
+         <th><center class="name-cell">Category</center></th>
+         <th><center class="price-cell">Price</center></th>
+         <td><center><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span style="font-size:12px;" class="new badge" data-badge-caption="">Delete</span></a></center></td>
+
+       </tr>
+
+      
+      
+     </thead>
+   </table>
+   </div>
+
 	<div class="table-container" style="padding: 20px;">
+  
 		<table class="food-table">
      
 
