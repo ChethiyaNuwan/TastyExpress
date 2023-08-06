@@ -29,6 +29,17 @@ if (!isset($_REQUEST['id'])) {
 
 	$id = $_REQUEST['id'];
 
+if (!isset($_REQUEST['path'])) {
+
+    $_SESSION['msg'] = 'Invalid image path!';
+
+    header('location: ../../admin/food.php');
+
+    exit();
+}
+
+$path = $_REQUEST['path'];
+
 
 
 	
@@ -36,13 +47,17 @@ if (!isset($_REQUEST['id'])) {
 		$sql = "DELETE FROM foods WHERE id = ?";
 		$query = $conn->prepare($sql);
 		if ($query->execute([$id])) {
-			$_SESSION['food_msg'] = 'Category Deleted!';
+			$_SESSION['food_msg'] = 'Food Deleted!';
+
+            //deleting food image
+            unlink('../../images/food/'.$path);
+
 			header('location: ../../admin/food.php');
 		} else {
 			$_SESSION['food_msg'] = 'There were some problem in the server! Please try again after some time!';
 			header('location: ../../admin/food.php');
 		}
 	} catch (mysqli_sql_exception $e) {
-		$_SESSION['food_msg'] = 'Cannot delete this FOOD beacuse there is an Order on it!';
+		$_SESSION['food_msg'] = 'Cannot delete this FOOD because there is an Order on it!';
 		header('location: ../../admin/food.php');
 	}

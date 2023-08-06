@@ -52,7 +52,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
           <td class="name-cell"><center><?php echo $key['name']; ?></center></td>
           <td><center><img width="100" src="../images/category/<?php echo $key['image_path']; ?>"></center></td>
           <td class="description-cell"><center><?php echo $key['description']; ?></center></td>
-            <td><center><a href="../backend/admin/category-delete.php?id=<?php echo $key['id']; ?>"><span class="new badge" data-badge-caption="">Delete</span></a></center></td>
+            <td><center><a href="../backend/admin/category-delete.php?id=<?php echo $key['id'].'&path='.$key['image_path'] ?>"><span class="new badge" data-badge-caption="">Delete</span></a></center></td>
         </tr>
 
         <?php } ?>
