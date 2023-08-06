@@ -19,7 +19,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
   <div class="order-dashbord-internal">
 
 	<div class="order-heading">
-		<h1 class="orderh1">ORDERS</h3>
+		<h1 class="orderh1">ORDERS</h1>
 </div>
 
 

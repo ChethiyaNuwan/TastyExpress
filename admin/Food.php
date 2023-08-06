@@ -18,7 +18,6 @@ if (!isset($_SESSION['username'])) {
 <?php
 include ('shared/navbar.php');
 
-
 ?>
 <div class="index-page">
     <div class="index-page-left">
