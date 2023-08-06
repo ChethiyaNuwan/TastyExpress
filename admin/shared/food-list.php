@@ -58,7 +58,7 @@ $arr_all =  $result->fetch_all(MYSQLI_ASSOC);
          <th style="width:100px;"><center>Image</center></th>
          <th><center class="name-cell">Category</center></th>
          <th><center class="price-cell">Price</center></th>
-         <td><center><a href="../backend/admin/food-delete.php?id=<?php echo $key['id']; ?>"><span style="font-size:12px;" class="new badge" data-badge-caption="">Delete</span></a></center></td>
+         <th style="width:60px;"></th>
 
        </tr>
 
