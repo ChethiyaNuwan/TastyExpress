@@ -6,7 +6,7 @@ try {
     if (!file_exists("../connect-db.php" ))
         throw new Exception();
     else
-        require_once("../connect-db.php" ); 
+        require_once("../connect-db.php");
 		
 } catch (Exception $e) {
 

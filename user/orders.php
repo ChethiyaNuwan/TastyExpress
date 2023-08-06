@@ -5,7 +5,7 @@ if (!isset($_SESSION['user_data'])){
     exit();
 }
 
-require_once ('../backend/connect-db.php');
+require_once('../backend/connect-db.php');
 ?>
 
 <!DOCTYPE html>

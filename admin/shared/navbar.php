@@ -3,7 +3,7 @@
     <span class="nav-list">
             <a href="../admin/indexdashbord.php">Home</a>
             <a href="../user/index.php">Main site</a>
-            <a href="../backend/admin/logout.php">LogOut</a>
+            <a href="../backend/admin/logout.php">Logout</a>
            
         </span>
 </nav>
